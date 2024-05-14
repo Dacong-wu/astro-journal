@@ -1,25 +1,25 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from 'astro/types'
 
 type Props = HTMLAttributes<'time'> & {
-	date: Date;
-};
+  date: Date
+}
 
-const { date, ...attrs } = Astro.props;
+const { date, ...attrs } = Astro.props
 ---
 
 <time datetime={date.toISOString()} {...attrs}>
-	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
-	}
+  {
+    date.toLocaleDateString('zh-CN', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    })
+  }
 </time>
 
 <style>
-	time {
-		display: block;
-	}
+  time {
+    display: block;
+  }
 </style>
