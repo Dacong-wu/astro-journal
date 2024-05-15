@@ -1,11 +1,23 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
+import { number } from 'astro/zod'
 
 type Props = HTMLAttributes<'time'> & {
   date: Date
 }
 
 const { date, ...attrs } = Astro.props
+const now = new Date()
+
+function getDaysDifference(startDate: Date, endDate: Date) {
+  const oneDay = 24 * 60 * 60 * 1000 // 一天的毫秒数
+  const diffDays = Math.floor(
+    (endDate.getTime() - startDate.getTime()) / oneDay
+  )
+  return diffDays
+}
+
+const daysDifference = getDaysDifference(date, now)
 ---
 
 <time datetime={date.toISOString()} {...attrs}>
@@ -16,6 +28,9 @@ const { date, ...attrs } = Astro.props
       day: 'numeric',
     })
   }
+</time>
+<time datetime={date.toISOString()} {...attrs}>
+  {`距离现在 ${daysDifference} 天`}
 </time>
 
 <style>
