@@ -3,3 +3,7 @@
 
 export const SiteTitle = '🎉幸福日志'
 export const SiteDescription = '幸福日志，记录幸福生活，记录、分享、成长。'
+export const SiteImage = {
+  src: '/apple-touch-icon.png',
+  alt: 'site-image',
+}
