@@ -2,8 +2,8 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SiteTitle = '🎉幸福日志'
-export const SiteDescription = '幸福日志，记录幸福生活，记录、分享、成长。'
+export const SiteDescription = '幸福的事情更要记录'
 export const SiteImage = {
-  src: 'https://bitiful.ll1025.cn/avatar/apple-touch-icon.png',
+  src: 'https://2018-0215.cn/apple-touch-icon.png',
   alt: 'site-image',
 }
