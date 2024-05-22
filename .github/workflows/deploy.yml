@@ -34,6 +34,6 @@ jobs:
         with:
           SFTP_HOST: ${{ secrets.HOST }}
           SFTP_USERNAME: ${{ secrets.USER_NAME }}
-          SFTP_PRIVATEKEY: ${{ secrets.USER_PRIVATEKEY }}
+          SFTP_PASSWORD: ${{ secrets.USER_PASSWORD }}
           SFTP_REMOTE: ${{secrets.REMOTE}}
           BACKUP: false
